@@ -11,7 +11,7 @@
     - [Mapping to Standards and Heatmap](#mapping-to-standards-and-heatmap)
         - [Mapping to Standards](#mapping-to-standards)
         - [Heatmap](#heatmap)
-    - [Maturity Pyramid (ex - *Kirillamid*)](#maturity-pyramid)
+    - [DAF maturity pyramid (ex - *Kirillamid*)](#maturity-pyramid)
 - [How to Use the Framework](#how-to-use-the-framework)
 - [Materials Used in Development](#materials-used-in-development)
 - [Contact Us](#contact-us)
@@ -29,7 +29,7 @@ Not all of our work on DAF is publicly available. However, we believe that the m
 - DAF Map (ex - *Pirate Map*);
     - *Technology* and *Process* models, including domains, subdomains, and practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.);
 - Mapping to standards and maturity heatmap;
-- Maturity Pyramid (ex - *Kirillamid*).
+- DAF maturity pyramid (ex - *Kirillamid*).
 
 **All of this will remain publicly available forever.**
 
@@ -38,7 +38,7 @@ There is, however, a "closed" part that we implement in our audit projects using
 - Questionnaires for development teams to collect information from them offline;
 - Detailed examples of how to verify that a given practice is **actually** implemented, as well as examples of how **each** practice should be implemented;
 - A roadmap for building DevSecOps processes based on each practice and its implementation;
-- Dynamic visualization — highlighting each cell of the Maturity Pyramid, heatmap, and DAF Map depending on the degree of practice implementation;
+- Dynamic visualization — highlighting each cell of the DAF maturity pyramid, heatmap, and DAF Map depending on the degree of practice implementation;
 - A detailed and customizable audit report based on DAF;
 - Automated calculation of DevSecOps/AppSec FTE requirements for implementing DevSecOps tools, taking into account the number of development teams and planned tasks;
 - And much more.
@@ -72,7 +72,7 @@ The DevSecOps Assessment Framework is a maturity assessment framework for secure
 
 - DAF Map (ex - *Pirate Map*);
 - Mapping to standards and Heatmap;
-- Maturity Pyramid (ex - *Kirillamid*).
+- DAF maturity pyramid (ex - *Kirillamid*).
 
 ### DAF Map
 
@@ -94,7 +94,6 @@ The *DAF Map* provides a high-level view of the entire framework. It includes al
 
 The mapping to standards contains various practices and evaluation criteria (“True” and “False” for stage 0, as well as “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and higher). Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
 
-[Mapping to standards in markdown format (v4.6.4)](DAF.md)
 
 #### Heatmap
 
@@ -106,30 +105,36 @@ The main purpose of the heatmap is **visualization of collected data.**
 
 In the evaluation table and heatmap, the following maturity stages are used (similar to most other well-known frameworks):
 
-- **Stage 0: Uninitiated**  
+- **Stage 0: Chaos**  
   > At this stage, the company has no formalized processes or tools for secure development. Practices may be applied sporadically at the initiative of individual employees.
 
 - **Stage 1: Beginners**  
   > At this stage, secure development tools begin to appear, but with minimal coverage and without automation. Basic processes emerge.
+  
+- **Stage 2: Basic**  
+  > At this stage, the company has basic tools and processes to perform secure development process.
 
-- **Stage 2: Intermediate**  
+- **Stage 3: Enhanced**  
   > Processes at this stage become repeatable and manageable, coverage of tools expands, and automation is introduced. The company starts applying methodologies for planning, executing, and tracking activities, though they may not always be consistent or fully documented. Tools still do not cover the entire secure development process.
 
-- **Stage 3: Advanced**  
+- **Stage 4: Advanced**  
   > At this stage, secure development tools provide maximum coverage and automation. All processes are consistent and fully documented.
 
-- **Stage 4: Experts**  
+- **Stage 5: Experts**  
   > At this highest stage, processes and tools are fully developed, but there is always room for improvement.
 
-### Maturity Pyramid
+- **Stage 6: Ultimate**  
+  > At this highest stage, processes and tools are fully developed, but there is always room for improvement.
+
+### DAF maturity pyramid
 
 > (ex - *Kirillamid*)
 
-The term originated from merging the word *Pyramid* with the name of its creator — ***Kirill Bochkarev***. Although it is no longer strictly a pyramid for navigational convenience, the name remains associated with this part of DAF.
+The term originated from merging the word *Pyramid* with the name of its original authors — ***Kirill Bochkarev***. Although it is no longer strictly a pyramid for navigational convenience, the name remains associated with this part of DAF.
 
-The Maturity Pyramid shows the sequence of secure development practices with maximum detail of all activities.
+The DAF maturity pyramid shows the sequence of secure development practices with maximum detail of all activities.
 
-![Maturity Pyramid](./images/The_Pyramid_of_Maturity.jpg)
+![DAF maturity pyramid](./images/The_Pyramid_of_Maturity.jpg)
 
 **Its purposes are:**
 
@@ -154,10 +159,10 @@ Quick guide:
 1. The best starting point is the “Mapping to Standards” tab, which contains all domains, subdomains, and practices. Fill in practices sequentially from top to bottom. If a subdomain is not applicable at all in your company, simply skip it (mark “False” at level 0 and “Not Implemented” for all practices of that subdomain).
 2. To parallelize the process, entire subdomains can be assigned to relevant business units in your company for completion.
 3. After filling in all practices on the “Mapping to Standards” sheet, you can evaluate subdomain coverage percentage there. On the “Heatmap” tab, you can also see this coverage percentage with dynamic illumination (automated coloring of subdomain cells based on your answers).
-4. In the public version, the “Maturity Pyramid” and “DAF Map” sheets do not have dynamic illumination. However:  
+4. In the public version, the “DAF maturity pyramid” and “DAF Map” sheets do not have dynamic illumination. However:  
     - The DAF Map provides a high-level view of how domains, subdomains, and practices fit together. This visualization is suitable for audit reports.  
-    - The Maturity Pyramid helps assess how mature your secure development processes are. For clearer visualization, you can manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level according to the methodology described above.
-5. A colored Maturity Pyramid can also be useful for audit reporting.
+    - The DAF maturity pyramid helps assess how mature your secure development processes are. For clearer visualization, you can manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level according to the methodology described above.
+5. A colored DAF maturity pyramid can also be useful for audit reporting.
 
 If you have ideas or suggestions on how to improve the framework or make it easier to use, please share them with us!
 
