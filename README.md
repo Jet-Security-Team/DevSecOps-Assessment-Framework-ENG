@@ -1,4 +1,4 @@
-# DevSecOps Assessment Framework (DAF) — English Translation
+# DevSecOps Assessment Framework (DAF)
 
 ### Contents
 - [Introduction](#introduction)
@@ -71,8 +71,9 @@ The DevSecOps Assessment Framework is a maturity assessment framework for secure
 **DAF consists of three components:**
 
 - DAF Map (ex - *Pirate Map*);
-- Mapping to standards and Heatmap;
-- DAF maturity pyramid (ex - *Kirillamid*).
+- DAF Heatmap;
+- DAF maturity pyramid (ex - *Kirillamid*);
+- Mapping to standards.
 
 ### DAF Map
 
@@ -88,14 +89,8 @@ The *DAF Map* provides a high-level view of the entire framework. It includes al
 
 ![new_model_processes](./images/Model_Processes.png)
 
-### Mapping to Standards and Heatmap
 
-#### Mapping to Standards
-
-The mapping to standards contains various practices and evaluation criteria (“True” and “False” for stage 0, as well as “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and higher). Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
-
-
-#### Heatmap
+#### DAF Heatmap
 
 ![new_Heatmap](./images/Heatmap.png)
 
@@ -152,13 +147,17 @@ The DAF maturity pyramid shows the sequence of secure development practices with
 
 > Practices at lower levels of the pyramid have a higher implementation priority compared to those at higher levels.
 
+#### Mapping to Standards
+
+The mapping to standards contains various practices and evaluation criteria (“True” and “False” for stage 0, as well as “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and higher). Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
+
 ## How to Use the Framework
 
 Quick guide:
 
-1. The best starting point is the “Mapping to Standards” tab, which contains all domains, subdomains, and practices. Fill in practices sequentially from top to bottom. If a subdomain is not applicable at all in your company, simply skip it (mark “False” at level 0 and “Not Implemented” for all practices of that subdomain).
+1. The best starting point is the “Practices and Requirements” tab, which contains all domains, subdomains, and practices. Fill in practices sequentially from top to bottom. If a subdomain is not applicable at all in your company, simply skip it (mark “False” at level 0 and “Not Implemented” for all practices of that subdomain).
 2. To parallelize the process, entire subdomains can be assigned to relevant business units in your company for completion.
-3. After filling in all practices on the “Mapping to Standards” sheet, you can evaluate subdomain coverage percentage there. On the “Heatmap” tab, you can also see this coverage percentage with dynamic illumination (automated coloring of subdomain cells based on your answers).
+3. After filling in all practices on the “Practices and Requirements” spreadsheet, you can evaluate subdomain coverage percentage there. On the “DAF maturity pyramid” tab, you can also see this coverage percentage with dynamic illumination (automated coloring of subdomain cells based on your answers).
 4. In the public version, the “DAF maturity pyramid” and “DAF Map” sheets do not have dynamic illumination. However:  
     - The DAF Map provides a high-level view of how domains, subdomains, and practices fit together. This visualization is suitable for audit reports.  
     - The DAF maturity pyramid helps assess how mature your secure development processes are. For clearer visualization, you can manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level according to the methodology described above.
@@ -166,7 +165,7 @@ Quick guide:
 
 If you have ideas or suggestions on how to improve the framework or make it easier to use, please share them with us!
 
-## Materials Used in Development
+## Materials Used to develop DAF framework
 
 The following materials were analyzed and used in creating the framework:
 
