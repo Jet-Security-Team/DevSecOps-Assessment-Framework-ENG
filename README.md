@@ -18,23 +18,34 @@
 
 ## Introduction
 
-There are many useful frameworks for evaluating secure development processes, such as SAMM, BSIMM, DSOMM, and MSDL. There are also best practices, benchmarks, and recommended approaches for protecting containers and container orchestration environments, such as the NSA Kubernetes Hardening Guide or CIS for Kubernetes. In addition, many tools improve security when building and enhancing DevSecOps processes (SAST, DAST, SCA, container security, secret management, and others), each with their own configuration and usage recommendations. However, there is no single framework that clearly describes what exactly needs to be done and in what order to establish a secure development process, objectively assess the existing maturity level, and understand the next steps.
+There are many useful frameworks for evaluating secure development processes, such as SAMM, BSIMM, DSOMM, and 
+Microsoft SDL. There are also best practices, benchmarks, and recommended approaches for protecting containers and 
+container orchestration environments, such as the NSA Kubernetes Hardening Guide or CIS for Kubernetes. In addition, 
+many tools improve security when building and enhancing DevSecOps processes (SAST, DAST, SCA, container security, 
+secret management, and others); each with its own configuration and usage recommendations. However, there is no 
+single framework that clearly describes what must be done and in what order to establish a secure 
+development process, objectively assess  existing maturity level, and identify next steps.
 
-The DevSecOps Assessment Framework (DAF) aims to solve this problem. It not only consolidates recommendations and best practices from various areas of DevSecOps, but also integrates the extensive expertise of our community, structured and adapted to modern realities. Some practices from well-known frameworks are not included in DAF, but new and more detailed practices have been added instead. All models, domains, subdomains, and practices are described in clear language to avoid ambiguity and misinterpretation.
+The DevSecOps Assessment Framework (DAF) aims to solve this problem. It consolidates recommendations and best 
+practices from various areas of DevSecOps and integrates our community's extensive expertise structured and adapted to modern 
+realities. Some practices from well-known frameworks are not included in DAF, but new and more detailed 
+practices have been added instead. All models, domains, subdomains, and practices are described in clear language 
+to avoid ambiguity and misinterpretation.
 
 ### Important Disclaimer
 
-Not all of our work on DAF is publicly available. However, we believe that the main part of the framework should remain public, specifically:
+Not all of our work on DAF is publicly available. However, we believe that the main part of the framework should 
+remain public, specifically:
 
 - DAF Map (ex - *Pirate Map*);
-    - *Technology* and *Process* models, including domains, subdomains, and practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.);
-- Mapping to standards and maturity heatmap;
-- DAF maturity pyramid (ex - *Kirillamid*).
+- DAF maturity heatmap;
+- DAF maturity pyramid (ex - *Kirillamid*);
+- Practices and requirements - description of *Technology* and *Process* models, including domains, subdomains, and 
+  practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.).
 
 **All of this will remain publicly available forever.**
 
 There is, however, a "closed" part that we implement in our audit projects using DAF. It includes:
-
 - Questionnaires for development teams to collect information from them offline;
 - Detailed examples of how to verify that a given practice is **actually** implemented, as well as examples of how **each** practice should be implemented;
 - A roadmap for building DevSecOps processes based on each practice and its implementation;
@@ -45,35 +56,36 @@ There is, however, a "closed" part that we implement in our audit projects using
 
 ## Goals and Objectives of DAF
 
-When implementing secure software development practices and processes, the first and most important question companies face is **“Where to start?”** To answer this question, the following path is needed:
+When implementing secure software development practices and processes, the first and most important question 
+companies face is **“Where to start?”**. To answer this question, you may follow these steps:
 
-1. Determine where you are now;
-2. Determine the direction of development;
-3. Define the target state;
-4. Identify initiatives that will help achieve the target state;
-5. Analyze the collected information to assess the required resources;
-6. Create a roadmap for implementing initiatives;
+1. Determine where you are now.
+2. Determine the direction of development.
+3. Define the target state.
+4. Identify initiatives that will help achieve the target state.
+5. Analyze collected information to assess required resources.
+6. Create a roadmap for implementing the initiatives.
 7. Implement the initiatives.
 
 The main objectives in creating DAF were:
 
-- To form a set of practices covering the entire secure development process in detail;
-- To ensure these practices remain relevant;
-- To make the maturity assessment process as simple as possible;
-- To create an approach for defining the current maturity level of the organization and the practices related to that level;
-- To provide clear visualization for better understanding of results;
-- To build an incremental approach to maturity levels.
+- Form a set of practices that cover the entire secure development process in detail.
+- Ensure those practices remain relevant.
+- Make the maturity assessment process as simple as possible.
+- Provide an approach to define an organization's current maturity level and the practices associated with it.
+- Provide clear visualization to improve understanding of results.
+- Build an incremental approach to maturity levels.
 
 ## Description of DAF
 
 The DevSecOps Assessment Framework is a maturity assessment framework for secure software development. Here, the word “framework” refers to a set of tools, principles, rules, guidelines, and processes that help create secure software.
 
-**DAF consists of three components:**
+**DAF consists of four components:**
 
 - DAF Map (ex - *Pirate Map*);
 - DAF Heatmap;
 - DAF maturity pyramid (ex - *Kirillamid*);
-- Mapping to standards.
+- Practices and requirements.
 
 ### DAF Map
 
@@ -94,38 +106,25 @@ The *DAF Map* provides a high-level view of the entire framework. It includes al
 
 ![new_Heatmap](./images/Heatmap.png)
 
-The heatmap shows the degree of practice implementation within a subdomain across four maturity stages (in percentages). For example, if compliance with the THIRD stage of “Secrets Identification” requires meeting four conditions, but at the time of the audit only two are met, then the heatmap will display “50%” compliance with stage three.
+The heatmap shows the degree of practices' implementation within a subdomain across four maturity stages (in 
+percentages). For example, if compliance with the THIRD stage of “Secrets Identification” requires meeting four 
+conditions but only two are met, the heatmap will display “50%” compliance for stage three.
 
-The main purpose of the heatmap is **visualization of collected data.**
+The main purpose of the heatmap is **visualization the collected data.**
 
-In the evaluation table and heatmap, the following maturity stages are used (similar to most other well-known frameworks):
-
-- **Stage 0: Chaos**  
-  > At this stage, the company has no formalized processes or tools for secure development. Practices may be applied sporadically at the initiative of individual employees.
-
-- **Stage 1: Beginners**  
-  > At this stage, secure development tools begin to appear, but with minimal coverage and without automation. Basic processes emerge.
-  
-- **Stage 2: Basic**  
-  > At this stage, the company has basic tools and processes to perform secure development process.
-
-- **Stage 3: Enhanced**  
-  > Processes at this stage become repeatable and manageable, coverage of tools expands, and automation is introduced. The company starts applying methodologies for planning, executing, and tracking activities, though they may not always be consistent or fully documented. Tools still do not cover the entire secure development process.
-
-- **Stage 4: Advanced**  
-  > At this stage, secure development tools provide maximum coverage and automation. All processes are consistent and fully documented.
-
-- **Stage 5: Experts**  
-  > At this highest stage, processes and tools are fully developed, but there is always room for improvement.
-
-- **Stage 6: Ultimate**  
-  > At this highest stage, processes and tools are fully developed, but there is always room for improvement.
+There are three main parts of heatmap:
+- **Stages 0-2** - from Chaos to Basic - the main purpose is to implement basic practices and 
+  processes, integrate security tools, and ensure that your developer teams use them.
+- **Stages 3-5** - from Enhanced to Developed - the main purpose is to scale the tools for maximum coverage and
+  integrate advanced tools for secure development.
+- **Stages 6, 7** - Expert and Ultimate - processes and tools are fully developed (though there's always room for 
+  improvement). At these stages consider integrating most advanced and challenging practices.
 
 ### DAF maturity pyramid
 
-> (ex - *Kirillamid*)
-
-The term originated from merging the word *Pyramid* with the name of its original authors — ***Kirill Bochkarev***. Although it is no longer strictly a pyramid for navigational convenience, the name remains associated with this part of DAF.
+> (ex - *Kirillamid*) - The term originated from merging the word *Pyramid* with the name of its original author — 
+> ***Kirill Bochkarev***. Although it is no longer strictly a pyramid, the name remains 
+> associated with this part of DAF for navigational convenience.
 
 The DAF maturity pyramid shows the sequence of secure development practices with maximum detail of all activities.
 
@@ -133,37 +132,58 @@ The DAF maturity pyramid shows the sequence of secure development practices with
 
 **Its purposes are:**
 
-- **Understanding the current state of secure development processes**: The company can determine its current maturity level.
-- **Planning**: The pyramid helps plan next steps in developing secure development processes.
-- **Motivation**: By tracking progress on the pyramid, development teams can see their growth, motivating further improvements.
-- **Standardization**: The pyramid can serve as the basis for internal standards and policies for improving secure development processes.
+- **Understanding the current state of secure development processes**: The company is able to determine its current 
+  maturity level.
+- **Planning**: The pyramid helps plan the next steps in developing secure development processes.
+- **Motivation**: By tracking progress on the pyramid, development teams can see their progression, which motivates 
+  further improvements.
+- **Standardization**: The pyramid can form the basis for internal standards and policies for improving secure 
+  development processes.
 
 **Choosing the target maturity level** follows this algorithm:
 
-1. By default, the target level is “Basic,” which includes introducing basic tools and processes with the necessary initial scope.
-2. If secure development practices at **each** of levels 0–2 are 80–100% implemented, the target level should be “Enhanced” or “Advanced.”
-3. If secure development practices at levels 0–2 are 80–100% implemented, but practices at levels 3–5 are less than 80% implemented at **any** level, the target should be “Developed.”
-4. If secure development practices at **all** levels 0–5 are at least 80% implemented, the target level may be “Expert” or “Cosmic.”
+1. By default, the target stage is “Basic,” which includes integration of basic tools and processes with the necessary 
+   initial scope.
+2. If secure development practices at **each** of stages 0–2 are implemented at 80–100%, the target stage should be 
+   “Enhanced” or “Advanced.”
+3. If secure development practices at stages 0–2 are implemented at 80–100%, but practices at any stage 3–5 are 
+   implemented below 80%, the target stage should be “Developed.”
+4. If secure development practices at **all** stages 0–5 are implemented at least 80%, the target stage may be 
+   “Expert” or “Ultimate.”
 
-> Practices at lower levels of the pyramid have a higher implementation priority compared to those at higher levels.
+> Practices at lower levels of the pyramid have higher implementation priority than those at higher levels.
 
-#### Mapping to Standards
+### Practices and requirements
 
-The mapping to standards contains various practices and evaluation criteria (“True” and “False” for stage 0, as well as “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and higher). Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
+This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and 
+“Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and above. Practices are grouped 
+into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more 
+practices may need to be implemented.
+
+Mapping for standards is done for practices where applicable.
 
 ## How to Use the Framework
 
 Quick guide:
 
-1. The best starting point is the “Practices and Requirements” tab, which contains all domains, subdomains, and practices. Fill in practices sequentially from top to bottom. If a subdomain is not applicable at all in your company, simply skip it (mark “False” at level 0 and “Not Implemented” for all practices of that subdomain).
-2. To parallelize the process, entire subdomains can be assigned to relevant business units in your company for completion.
-3. After filling in all practices on the “Practices and Requirements” spreadsheet, you can evaluate subdomain coverage percentage there. On the “DAF maturity pyramid” tab, you can also see this coverage percentage with dynamic illumination (automated coloring of subdomain cells based on your answers).
-4. In the public version, the “DAF maturity pyramid” and “DAF Map” sheets do not have dynamic illumination. However:  
-    - The DAF Map provides a high-level view of how domains, subdomains, and practices fit together. This visualization is suitable for audit reports.  
-    - The DAF maturity pyramid helps assess how mature your secure development processes are. For clearer visualization, you can manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level according to the methodology described above.
+1. The best starting point is the “Practices and Requirements” tab, which contains all domains, subdomains, and 
+   practices. Fill in practices sequentially from top to bottom. If a subdomain is not applicable to your 
+   company, simply skip it (mark “False” at level 0 and “Not Implemented” for all practices of that subdomain).
+2. To parallelize the process, assign entire subdomains to relevant business units for completion.
+3. After filling in all practices on the “Practices and Requirements” spreadsheet, you can evaluate subdomain 
+   coverage percentage there. On the “DAF maturity pyramid” tab, you can also view this coverage percentage with 
+   dynamic visualization (automated coloring of subdomain cells based on your answers).
+4. In the public version, the “DAF maturity pyramid” and “DAF Map” sheets do not have dynamic visualization. However:  
+    - The DAF Map provides a high-level view of how domains, subdomains, and practices fit together. This 
+      visualization is suitable for audit reports.
+    - The DAF maturity pyramid helps assess the maturity of your secure development processes are. For clearer 
+      visualization, manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) 
+      according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion 
+      for each group across all maturity levels. Then determine the current maturity level and set the target level 
+      using the methodology described above.
 5. A colored DAF maturity pyramid can also be useful for audit reporting.
 
-If you have ideas or suggestions on how to improve the framework or make it easier to use, please share them with us!
+If you have ideas or suggestions to improve the framework or make it easier to use, please share them with us!
 
 ## Materials Used to develop DAF framework
 
@@ -183,13 +203,15 @@ The following materials were analyzed and used in creating the framework:
 - Best practices:
     - Aqua Cloud Native Security Maturity Model;
     - [Secrets Management Maturity Model](https://blog.gitguardian.com/a-maturity-model-for-secrets-management/).
-- Our experience, as well as that of our clients.
+- Our experience and that of our clients.
 
 ## Contact Us
 
-If you use our framework for commercial purposes, in developing local or governmental regulations, for marketing or other public purposes, or if you present it in articles or at conferences — please let us know (for example, via chat or email). 
+If you use DAF for commercial purposes, when developing local or governmental regulations, for marketing or 
+other public purposes, or when presenting it in articles or at conferences, please let us know (for example, via 
+chat or email).
 
 - [Telegram: DevSecOps_Assessment_Framework](https://t.me/DevSecOps_Assessment_Framework)
 - [Mail: daf@jet.su](mailto:daf@jet.su)
 
-This information helps us understand the reach and usefulness of our framework.
+This information helps us understand the reach and usefulness of the framework.
