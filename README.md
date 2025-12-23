@@ -18,12 +18,12 @@
 
 ## Introduction
 
-There are many useful frameworks for evaluating secure development processes, such as SAMM, BSIMM, DSOMM, and 
-Microsoft SDL. There are also best practices, benchmarks, and recommended approaches for protecting containers and 
-container orchestration environments, such as the NSA Kubernetes Hardening Guide or CIS for Kubernetes. In addition, 
-many tools improve security when building and enhancing DevSecOps processes (SAST, DAST, SCA, container security, 
+There are many useful frameworks for evaluating the secure development processes, such as SAMM, BSIMM, DSOMM, and 
+Microsoft SDL. There are also best practices, benchmarks, and recommended approaches for protecting container environments, 
+such as the NSA Kubernetes Hardening Guide or CIS for Kubernetes. In addition, 
+many tools improve the security when building and enhancing DevSecOps processes (SAST, DAST, SCA, container security, 
 secret management, and others); each with its own configuration and usage recommendations. However, there is no 
-single framework that clearly describes what must be done and in what order to establish a secure 
+single framework that clearly describes what must be done and in which order to establish a secure 
 development process, objectively assess  existing maturity level, and identify next steps.
 
 The DevSecOps Assessment Framework (DAF) aims to solve this problem. It consolidates recommendations and best 
@@ -62,7 +62,7 @@ companies face is **“Where to start?”**. To answer this question, you may fo
 1. Determine where you are now.
 2. Determine the direction of development.
 3. Define the target state.
-4. Identify initiatives that will help achieve the target state.
+4. Identify initiatives that will help to achieve the target state.
 5. Analyze collected information to assess required resources.
 6. Create a roadmap for implementing the initiatives.
 7. Implement the initiatives.
@@ -80,12 +80,12 @@ The main objectives in creating DAF were:
 
 The DevSecOps Assessment Framework is a maturity assessment framework for secure software development. Here, the word “framework” refers to a set of tools, principles, rules, guidelines, and processes that help create secure software.
 
-**DAF consists of four components:**
+**DAF consists of four main components:**
 
 - DAF Map (ex - *Pirate Map*);
 - DAF Heatmap;
 - DAF maturity pyramid (ex - *Kirillamid*);
-- Practices and requirements.
+- DAF Practices and requirements.
 
 ### DAF Map
 
@@ -153,7 +153,7 @@ The DAF maturity pyramid shows the sequence of secure development practices with
 
 > Practices at lower levels of the pyramid have higher implementation priority than those at higher levels.
 
-### Practices and requirements
+### DAF Practices and requirements
 
 This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and 
 “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and above. Practices are grouped 
