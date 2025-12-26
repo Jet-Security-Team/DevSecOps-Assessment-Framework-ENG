@@ -77,7 +77,7 @@ The DevSecOps Assessment Framework is a maturity assessment framework for secure
 
 The *DAF Map* provides a high-level view of the entire framework. It includes all aspects of the secure development process, from planning to production deployment. The map is divided into two blocks: the *Technology* model and the *Process* model. ![new_model_technology](./images/DAF_model.png)
 
-#### DAF assesment outcomes
+### DAF assesment outcomes
 
 ![assesment_outcomes](./images/Assesment_outcomes.png)
 
