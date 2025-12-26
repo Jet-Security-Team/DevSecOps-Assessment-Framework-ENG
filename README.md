@@ -5,11 +5,12 @@
     - [Important Disclaimer](#important-disclaimer)
 - [Goals and Objectives of DAF](#goals-and-objectives-of-daf)
 - [Description of DAF](#description-of-daf)
-    - [DAF Map](#daf-map)
-    - [DAF Heatmap](#daf-heatmap)
-    - [DAF maturity pyramid](#maturity-pyramid)
-- [How to Use the Framework](#how-to-use-the-framework)
-- [Materials Used in Development](#materials-used-in-development)
+    - [DAF map](#daf-map)
+    - [DAF assesment outcomes](#daf-assesment-outcomes)
+    - [DAF maturity pyramid](#daf-maturity-pyramid)
+    - [DAF practices and requirements](#daf-practices-and-requirements)
+- [How to use the Framework](#how-to-use-the-framework)
+- [Materials used to develop DAF](#materials-used-to-develop-daf)
 - [Contact Us](#contact-us)
 
 ## Introduction
@@ -24,9 +25,9 @@ The DevSecOps Assessment Framework (DAF) aims to solve this problem. It consolid
 Not all of our work on DAF is publicly available. However, we believe that the main part of the framework should remain public, specifically:
 
 - DAF general overview (DAF map);
-- DAF Assesment outcomes;
+- DAF assesment outcomes;
 - DAF maturity pyramid;
-- DAF Practices and requirements - description of *Technology* and *Process* models, including domains, subdomains, and 
+- DAF practices and requirements - description of *Technology* and *Process* models, including domains, subdomains, and 
   practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.).
 
 **All of this will remain publicly available forever.**
@@ -35,7 +36,7 @@ There is, however, a "closed" part that we implement in our audit projects using
 - Questionnaires for development teams to collect information from them offline;
 - Detailed examples of how to verify that a given practice is **actually** implemented, as well as examples of how **each** practice should be implemented;
 - A roadmap for building DevSecOps processes based on each practice and its implementation;
-- Dynamic visualization — highlighting each cell of the DAF maturity pyramid, heatmap, and DAF Map depending on the degree of practice implementation;
+- Dynamic visualization — highlighting each cell of the DAF maturity pyramid, assesment outcomes, and DAF map depending on the degree of practice implementation;
 - A detailed and customizable audit report based on DAF;
 - Automated calculation of DevSecOps/AppSec FTE requirements for implementing DevSecOps tools, taking into account the number of development teams and planned tasks;
 - And much more.
@@ -67,24 +68,24 @@ The DevSecOps Assessment Framework is a maturity assessment framework for secure
 
 **DAF consists of four main components:**
 
-- DAF Map;
-- DAF Heatmap;
-- DAF maturity Pyramid;
-- DAF Practices and requirements.
+- DAF map;
+- DAF assesment outcomes;
+- DAF maturity pyramid;
+- DAF practices and requirements.
 
 ### DAF Map
 
 The *DAF Map* provides a high-level view of the entire framework. It includes all aspects of the secure development process, from planning to production deployment. The map is divided into two blocks: the *Technology* model and the *Process* model. ![new_model_technology](./images/DAF_model.png)
 
-#### DAF Heatmap
+#### DAF assesment outcomes
 
-![new_Heatmap](./images/Heatmap.png)
+![assesment_outcomes](./images/Assesment_outcomes.png)
 
-The heatmap shows the degree of practices' implementation within a subdomain across four practice complexity levels (in percentages). For example, if compliance with the THIRD stage of “Secrets Identification” requires meeting four conditions but only two are met, the heatmap will display “50%” compliance for stage three.
+The assesment outcomes shows the degree of practices' implementation within a subdomain across four practice complexity levels (in percentages). For example, if compliance with the THIRD stage of “Secrets Identification” requires meeting four conditions but only two are met, the assesment outcomes will display “50%” compliance for stage three.
 
-The main purpose of the heatmap is **visualization the collected data.**
+The main purpose of the assesment outcomes is **visualization the collected data.**
 
-There are three main parts of heatmap:
+There are three main parts of assesment outcomes:
 - **Stages 0-2** - from Chaos to Basic - the main purpose is to implement basic practices and processes, integrate security tools, and ensure that your developer teams use them.
 - **Stages 3-5** - from Enhanced to Developed - the main purpose is to scale the tools for maximum coverage and integrate advanced tools for secure development.
 - **Stages 6, 7** - Expert and Ultimate - processes and tools are fully developed (though there's always room for improvement). At these stages consider integrating most advanced and challenging practices.
@@ -111,13 +112,13 @@ The DAF maturity pyramid shows the sequence of secure development practices with
 
 > Practices at lower levels of the pyramid have higher implementation priority than those at higher levels.
 
-### DAF Practices and requirements
+### DAF practices and requirements
 
-This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and “Implemented,” “Partially Implemented,” and “Not Implemented” for stage 1 and above. Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
+This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and “Implemented”, “Partially Implemented”, and “Not Implemented” for stage 1 and above. Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
 
 Mapping for standards is done for practices where applicable.
 
-## How to Use the Framework
+## How to use the Framework
 
 Quick guide:
 
@@ -126,12 +127,12 @@ Quick guide:
 3. After filling in all practices on the “Practices and Requirements” spreadsheet, you can evaluate subdomain coverage percentage there. On the “DAF maturity pyramid” tab, you can also view this coverage percentage with dynamic visualization (automated coloring of subdomain cells based on your answers).
 4. In the public version, the “DAF maturity pyramid” and “DAF Map” sheets do not have dynamic visualization. However:  
     - The DAF Map provides a high-level view of how domains, subdomains, and practices fit together. This visualization is suitable for audit reports.
-    - The DAF maturity pyramid helps assess the maturity of your secure development processes are. For clearer visualization, manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Heatmap, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level using the methodology described above.
+    - The DAF maturity pyramid helps assess the maturity of your secure development processes are. For clearer visualization, manually color cells with practice groups (e.g., T-CODE-IMG-1, T-PREPROD-DAST-2, etc.) according to their completion percentage in the Assesment outcomes, and/or calculate the average percentage of completion for each group across all maturity levels. Then determine the current maturity level and set the target level using the methodology described above.
 5. A colored DAF maturity pyramid can also be useful for audit reporting.
 
 If you have ideas or suggestions to improve the framework or make it easier to use, please share them with us!
 
-## Materials Used to develop DAF framework
+## Materials used to develop DAF
 
 The following materials were analyzed and used in creating the framework:
 
