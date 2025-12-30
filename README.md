@@ -6,9 +6,9 @@
 - [Goals and Objectives of DAF](#goals-and-objectives-of-daf)
 - [Description of DAF](#description-of-daf)
     - [DAF map](#daf-map)
+    - [DAF practices and requirements](#daf-practices-and-requirements)
     - [DAF assesment outcomes](#daf-assesment-outcomes)
     - [DAF maturity pyramid](#daf-maturity-pyramid)
-    - [DAF practices and requirements](#daf-practices-and-requirements)
 - [How to use the Framework](#how-to-use-the-framework)
 - [Materials used to develop DAF](#materials-used-to-develop-daf)
 - [Contact Us](#contact-us)
@@ -25,10 +25,10 @@ The DevSecOps Assessment Framework (DAF) aims to solve this problem. It consolid
 Not all of our work on DAF is publicly available. However, we believe that the main part of the framework should remain public, specifically:
 
 - DAF general overview (DAF map);
-- DAF assesment outcomes;
-- DAF maturity pyramid;
 - DAF practices and requirements - description of *Technology* and *Process* models, including domains, subdomains, and 
-  practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.).
+  practices, as well as mapping of these practices to other widely known frameworks (BSIMM, SAMM, DSOM, etc.);
+- DAF assesment outcomes;
+- DAF maturity pyramid.
 
 **All of this will remain publicly available forever.**
 
@@ -69,13 +69,21 @@ The DevSecOps Assessment Framework is a maturity assessment framework for secure
 **DAF consists of four main components:**
 
 - DAF map;
+- DAF practices and requirements;
 - DAF assesment outcomes;
-- DAF maturity pyramid;
-- DAF practices and requirements.
+- DAF maturity pyramid.
 
 ### DAF Map
 
 The *DAF Map* provides a high-level view of the entire framework. It includes all aspects of the secure development process, from planning to production deployment. The map is divided into two blocks: the *Technology* model and the *Process* model. ![new_model_technology](./images/DAF_model.png)
+
+### DAF practices and requirements
+
+[practices and requirements in markdown](DAF_public_ENG.md)
+
+This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and “Implemented”, “Partially Implemented”, and “Not Implemented” for stage 1 and above. Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
+
+Mapping for standards is done for practices where applicable.
 
 ### DAF assesment outcomes
 
@@ -111,12 +119,6 @@ The DAF maturity pyramid shows the sequence of secure development practices with
 4. If secure development practices at **all** stages 0–5 are implemented at least 80%, the target stage may be “Expert” or “Ultimate.”
 
 > Practices at lower levels of the pyramid have higher implementation priority than those at higher levels.
-
-### DAF practices and requirements
-
-This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and “Implemented”, “Partially Implemented”, and “Not Implemented” for stage 1 and above. Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
-
-Mapping for standards is done for practices where applicable.
 
 ## How to use the Framework
 
