@@ -79,7 +79,7 @@ The *DAF Map* provides a high-level view of the entire framework. It includes al
 
 ### DAF practices and requirements
 
-[practices and requirements in markdown](DAF_public_ENG.md)
+> [practices and requirements in markdown](DAF_public_ENG.md) and in xlsx
 
 This part of DAF contains various practices and evaluation criteria - “True” and “False” for stage 0, and “Implemented”, “Partially Implemented”, and “Not Implemented” for stage 1 and above. Practices are grouped into subdomains, and subdomains into domains. To achieve compliance with a given maturity stage, one or more practices may need to be implemented.
 
